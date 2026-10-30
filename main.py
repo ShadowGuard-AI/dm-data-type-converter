@@ -4,7 +4,7 @@ import hashlib
 import logging
 import random
 import sys
-from typing import List, Union
+from typing import Union
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -113,6 +113,9 @@ class DataTypeConverter:
         """
         if not isinstance(data, str):
             raise TypeError("Input must be a string.")
+        # Deliberately unseeded: the same input converts differently on
+        # every run, so random mode is for one-off masking, never for a
+        # column that must stay joinable across runs.
         methods = [self.to_hex, self.to_base64, self.to_md5]
         chosen_method = random.choice(methods)
         try:
@@ -147,7 +150,10 @@ def main() -> None:
 
     try:
         if args.method == "hex":
-            #Handles both string and int input
+            # A digit-only argument is treated as an integer, not as text:
+            # "123" converts as 123 (0x7b), not as the bytes of the string
+            # (313233), and leading zeros are lost ("0123" is also 0x7b).
+            # Anything that does not parse as an int is hexed as a string.
             try:
               data = int(args.data)
             except ValueError:
