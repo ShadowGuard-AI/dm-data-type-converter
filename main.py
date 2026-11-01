@@ -14,6 +14,14 @@ class DataTypeConverter:
     Converts data from one format to another for data masking purposes.
     """
 
+    # I am plain about what these three are: hex and base64 are encodings
+    # anyone can reverse with no key, and MD5 here is unsalted and
+    # deterministic, so a short or common value can be found again by
+    # hashing guesses. This class hides what a value looks like. It does
+    # not protect a value an attacker can guess, and the outputs differ in
+    # how much they give away: an MD5 is a fixed 32 hex characters, while a
+    # base64 string still carries the original length in its padding.
+
     def __init__(self):
         """
         Initializes the DataTypeConverter.
@@ -35,6 +43,9 @@ class DataTypeConverter:
             ValueError: If the string cannot be converted to bytes properly (encoding issues).
         """
         try:
+            # bool passes this isinstance check, because bool is an int in
+            # Python: to_hex(True) returns 0x1. The CLI never sends a bool,
+            # but a library caller can, and the result hides that it happened.
             if isinstance(data, int):
                 return hex(data)
             elif isinstance(data, str):
@@ -116,6 +127,11 @@ class DataTypeConverter:
         # Deliberately unseeded: the same input converts differently on
         # every run, so random mode is for one-off masking, never for a
         # column that must stay joinable across runs.
+        # The chosen method is also not recorded anywhere, and that is the
+        # sharper cost: from the output alone there is no reliable way to
+        # know which conversion produced it, and one of the three choices
+        # is MD5, which cannot be reversed at all. Random mode is a one way
+        # door even when it happens to pick a reversible encoding.
         methods = [self.to_hex, self.to_base64, self.to_md5]
         chosen_method = random.choice(methods)
         try:
