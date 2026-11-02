@@ -45,7 +45,7 @@ Field on the counter card: Conversion Method
 ## Usage
 `python3 main.py DATA [-m METHOD]`
 
-One line orders everything. The menu ends there. This record prints no worked calls, no tap marked input, and no tap marked output.
+One line orders everything: data is the input, and the converted data prints to stdout. This record still prints no worked example call.
 
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
@@ -56,11 +56,11 @@ One line orders everything. The menu ends there. This record prints no worked ca
 
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
-## One Flag, No Description
+## One Flag, Described
 
 Past help, the control list is one flag plus the required data positional, and that flag is now described in the parameter list above.
 
-The set of conversion methods is now listed in the parameter list above: hex, base64, md5, and random, beyond the two named conversions.
+The set of conversion methods is now listed in the parameter list above: hex, base64, md5, and random, beyond the two named conversions. There is still no guard paragraph: refusal behaviour is undocumented here, and output goes to stdout, not to a file control.
 
 ![Major separator: measuring tape unreeling across the counter](sep-heavy.svg)
 
