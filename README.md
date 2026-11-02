@@ -21,7 +21,7 @@ Converts data from one format to another to obscure the original value. For exam
 
 > Day book note, twine edge: the program can randomly select a method.
 
-> Day book note, twine edge: the -m flag carries no description.
+> Day book note, twine edge, corrected in this wave: the -m flag formerly carried no description; it now carries its four choices and random default.
 
 ![Major separator: measuring tape unreeling across the counter](sep-heavy.svg)
 
@@ -36,34 +36,35 @@ Field on the counter card: Conversion Method
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
 ## Install
-`git clone https://github.com/ShadowStrikeHQ/dm-data-type-converter`
+`git clone https://github.com/ShadowGuard-AI/dm-data-type-converter`
 
-> Day book note, twine edge: the clone line above names an older organisation. It stands exactly as published, because this page is a keepsake, not a correction. The corrected address lives on the website, labelled as a correction.
+> Day book note, twine edge, corrected in this wave: the clone line formerly named an older organisation; it now names ShadowGuard-AI.
 
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
 ## Usage
-`./dm-data-type-converter [params]`
+`python3 main.py DATA [-m METHOD]`
 
 One line orders everything. The menu ends there. This record prints no worked calls, no tap marked input, and no tap marked output.
 
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
 ## Parameters
+- `data`: The data to convert. Required.
 - `-h`: Show help message and exit
-- `-m`: No description provided
+- `-m`, `--method`: The conversion method to use. Choices: hex, base64, md5, random. Defaults to random.
 
 ![Minor separator: a short centred length of measuring tape](sep-light.svg)
 
 ## One Flag, No Description
 
-Past help, the whole control list is one flag, and that flag is mute. The -m line above confesses that no description was provided. What it selects, what choices it takes, and what it defaults toward are all unconfirmed in this record, and this page prints no guess in their place. It is a pump handle with no label saying which syrup sits underneath.
+Past help, the control list is one flag plus the required data positional, and that flag is now described in the parameter list above.
 
-Beyond the controls, the silences stand at full size. The set of conversion methods is never listed beyond the two named conversions. There is no input control and no output control in this record, and no guard paragraph anywhere: entry routes, exit destinations, and refusal behaviour are undocumented here.
+The set of conversion methods is now listed in the parameter list above: hex, base64, md5, and random, beyond the two named conversions.
 
 ![Major separator: measuring tape unreeling across the counter](sep-heavy.svg)
 
 ## License
-Copyright (c) ShadowStrikeHQ
+This project is released under the license in the [LICENSE](LICENSE) file. See LICENSE for details.
 
-> Day book note, twine edge: the closing line above names the older organisation, exactly as published. The repository LICENSE itself is a separate bottle on the back shelf, under MIT terms, and it is described on the website by outline only.
+> Day book note, twine edge, corrected in this wave: the closing line formerly named the older organisation; it now points at LICENSE.
