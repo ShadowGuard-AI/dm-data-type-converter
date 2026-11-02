@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 32" width="1200" height="32" role="img" aria-label="Minor separator: a short centred length of measuring tape">
+  <rect x="400" y="9" width="400" height="14" fill="#e3b93c"/>
+  <g stroke="#3f639e" stroke-width="2">
+    <line x1="430" y1="12" x2="430" y2="20"/><line x1="480" y1="12" x2="480" y2="17"/><line x1="530" y1="12" x2="530" y2="20"/><line x1="580" y1="12" x2="580" y2="17"/><line x1="630" y1="12" x2="630" y2="20"/><line x1="680" y1="12" x2="680" y2="17"/><line x1="730" y1="12" x2="730" y2="20"/><line x1="780" y1="12" x2="780" y2="17"/>
+  </g>
+  <polygon points="400,7 414,16 400,25" fill="#b8402f"/>
+  <polygon points="800,7 786,16 800,25" fill="#b8402f"/>
+  <rect x="400" y="27" width="400" height="1.5" fill="#8a8d90"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 48" width="1200" height="48" role="img" aria-label="Major separator: measuring tape unreeling across the counter">
+  <rect x="0" y="14" width="1200" height="20" fill="#e3b93c"/>
+  <rect x="0" y="14" width="1200" height="4" fill="#c8a24a"/>
+  <g stroke="#3f639e" stroke-width="2">
+    <line x1="30" y1="18" x2="30" y2="30"/><line x1="80" y1="18" x2="80" y2="26"/><line x1="130" y1="18" x2="130" y2="30"/><line x1="180" y1="18" x2="180" y2="26"/><line x1="230" y1="18" x2="230" y2="30"/><line x1="280" y1="18" x2="280" y2="26"/><line x1="330" y1="18" x2="330" y2="30"/><line x1="380" y1="18" x2="380" y2="26"/><line x1="430" y1="18" x2="430" y2="30"/><line x1="480" y1="18" x2="480" y2="26"/><line x1="530" y1="18" x2="530" y2="30"/><line x1="580" y1="18" x2="580" y2="26"/><line x1="630" y1="18" x2="630" y2="30"/><line x1="680" y1="18" x2="680" y2="26"/><line x1="730" y1="18" x2="730" y2="30"/><line x1="780" y1="18" x2="780" y2="26"/><line x1="830" y1="18" x2="830" y2="30"/><line x1="880" y1="18" x2="880" y2="26"/><line x1="930" y1="18" x2="930" y2="30"/><line x1="980" y1="18" x2="980" y2="26"/><line x1="1030" y1="18" x2="1030" y2="30"/><line x1="1080" y1="18" x2="1080" y2="26"/><line x1="1130" y1="18" x2="1130" y2="30"/>
+  </g>
+  <polygon points="0,10 26,24 0,38" fill="#b8402f"/>
+  <polygon points="1200,10 1174,24 1200,38" fill="#b8402f"/>
+  <rect x="0" y="40" width="1200" height="2" fill="#8a8d90"/>
+</svg>
